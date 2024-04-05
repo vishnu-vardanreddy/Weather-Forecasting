@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdUijW8Pl6X57WSf5jgv0q00gtqFw0w0saJw&usqp=CAU">
+    <title>weather</title>
+	<link rel="stylesheet" href="weather.css"> 
+  </head>
+  <body>
+  <header>
+        <nav class="navbar">
+            <span class="hamburger-btn material-symbols-rounded">menu</span>
+            <a href="#" class="logo">
+                <img src="vacation.png" alt="logo">
+                <h2>Weather Forcasting</h2>
+            </a>
+            <ul class="links">
+                <span class="close-btn material-symbols-rounded">close</span>
+                <li><a href="#Home">Home</a></li>
+				<li><a href="#About">About</a></li>
+				<li><a href="#Category">Category</a></li>
+				<li><a href="#Contact">Contact</a></li>
+            </ul>
+             <button class="login-btn" onclick="openLoginPage()">LOG IN</button> 
+        </nav>
+    </header>
+	<div class="input-box">
+		<i class="uil uil-search"></i>
+		<input type="text" id="search" placeholder="     Search here..." />
+		<button class="button" onclick="getData()">Search</button>
+	  </div>
+    <div id="main">
+      <div id="climate">
+        <div id="wheaterData"></div>
+      </div>
+      <div id="map">
+        <div class="gmap_canvas">
+          <iframe
+            width="100%"
+            height="400"
+            id="gmap_canvas"
+            src="https://maps.google.com/maps?&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-a.com"></a><br />
+        </div>
+      </div>
+      <div id="dailyWheater"></div>
+    </div>
+	<center>
+	<div >
+      <button onclick="openGraphPage()">Go Graph</button>
+    </div>
+	</center>
+  <section id="About">
+  <h2>About Section</h2>
+	<p>Welcome to Weather Forecasting, your one-stop destination for all things weather-related. We are passionate about providing accurate and up-to-date weather forecasts to help you plan your day with confidence.</p>
+    <p>Our team of meteorologists works tirelessly to gather data from various sources and analyze it to deliver reliable weather predictions. Whether you're planning a weekend getaway, outdoor event, or simply want to know if you'll need an umbrella tomorrow, we've got you covered.</p>
+    <p>In addition to weather forecasts, we also provide educational resources to help you understand the science behind weather patterns. From articles on climate change to explanations of meteorological phenomena, we strive to make weather science accessible to everyone.</p>
+    <p>At Weather Forecasting, we believe that knowledge is power, and by staying informed about the weather, you can make better decisions and stay safe in any conditions. Join us on our mission to make weather forecasting more accessible, accurate, and enjoyable for all.</p>
+  </section>
+  <section id="Category">Category Section
+  <ol class="d">
+        <li><a href="#">Local Weather</a> - Get detailed forecasts for your area, including temperature, humidity, and chance of precipitation.</li>
+        <li><a href="#">Travel Weather</a> - Plan your next trip with confidence by checking weather conditions at your destination.</li>
+        <li><a href="#">Outdoor Activities</a> - Find out if it's a good day for hiking, biking, or any other outdoor adventures.</li>
+        <li><a href="#">Severe Weather Alerts</a> - Stay informed about severe weather warnings and advisories in your area.</li>
+        <li><a href="#">Climate Change</a> - Learn about the latest research and news related to climate change and its impact on the planet.</li>
+        <li><a href="#">Weather Education</a> - Explore articles, videos, and resources to deepen your understanding of meteorology and weather science.</li>
+        <li><a href="#">Weather Apps & Tools</a> - Discover useful apps and tools to help you stay updated on the weather wherever you go.</li>
+    </ol>
+  </section>
+  <section id="Contact">Contact Section
+  <div class="form-container">
+          
+          <input type="text" placeholder="Your Name" />
+          <input type="email" placeholder="E-Mail" />
+          <textarea cols="30" rows="6" placeholder="Type Your Message"></textarea>
+          <a href="#" class="btn btn-primary">Submit</a>
+        </div>
+  </section>
+  </body>
+</html>
+<script src="weather.js">
+</script>

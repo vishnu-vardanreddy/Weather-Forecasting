@@ -1,0 +1,386 @@
+   * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+		
+      }
+      body {
+        background-image: url("https://www.adventurebikerider.com/wp-content/uploads/2017/10/tumblr_o27c7fByaO1tchrkco1_500.gif");
+		background-size:100% 50%;
+		
+      }
+/*new part*/
+	 .input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+	}
+
+	.input-box {
+		position: relative;
+		height: 76px;
+		max-width: 900px;
+		width: 100%; /* Changed width to 100% */
+		background: #fff;
+		border-radius: 8px;
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+		justify-content: center;
+		align-items: center;
+	} 
+	.input-box {
+	  position: relative;
+	  height: 76px;
+	  max-width: 900px;
+	  width: 200%;
+	  background: #fff;
+	  margin: 0 20px;
+	  border-radius: 8px;
+	  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+	  justify-content: center;
+	  align-items: center;
+	}
+		.input-box i,
+		.input-box .button {
+		  position: absolute;
+		  top: 50%;
+		  transform: translateY(-50%);
+		  justify-content: center;
+		  align-items: center;
+		}
+		.input-box i {
+		  left: 20px;
+		  font-size: 30px;
+		  color: #707070;
+		}
+		.input-box input {
+		  height: 100%;
+		  width: 100%;
+		  outline: none;
+		  font-size: 18px;
+		  font-weight: 400;
+		  border: none;
+		  padding: 0 155px 0 65px;
+		  background-color: transparent;
+		}
+		.input-box .button {
+		  right: 20px;
+		  font-size: 16px;
+		  font-weight: 400;
+		  color: #fff;
+		  border: none;
+		  padding: 12px 30px;
+		  border-radius: 6px;
+		  background-color: #4070f4;
+		  cursor: pointer;
+		}
+		.input-box .button:active {
+		  transform: translateY(-50%) scale(0.98);
+		}
+
+		/* Responsive */
+		@media screen and (max-width: 500px) {
+		  .input-box {
+			height: 66px;
+			margin: 0 8px;
+		  }
+		  .input-box i {
+			left: 12px;
+			font-size: 25px;
+		  }
+		  .input-box input {
+			padding: 0 112px 0 50px;
+			justify-content: center;
+		  }
+		  .input-box .button {
+			right: 12px;
+			font-size: 14px;
+			padding: 8px 18px;
+		  }
+		}
+
+/*end*/
+      #main {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* grid-template-rows: 200px; */
+        grid-gap: 10px;
+        grid-template-areas:
+          "d d d d d d d d d d d d"
+          "a a a a b b b b b b b b"
+          "c c c c c c c c c c c c";
+        padding: 10px;
+		
+      }
+
+      #climate {
+        grid-area: a;
+        /* background-color: yellow; */
+        padding: 0px 40px;
+      }
+      #map {
+        grid-area: b;
+        /* display: none; */
+        /* background-color: green; */
+      }
+      /* #wheaterData img{
+        
+        
+      } */
+      #dailyWheater {
+        grid-area: c;
+        /* background-color: rgb(177, 239, 243); */
+        border-radius: 30px;
+      }
+	  
+	  
+     
+      #dailyWheater {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        /* grid-template-rows: 200px; */
+        grid-gap: 10px;
+        width: 60%;
+        margin: auto;
+        padding: 10px;
+      }
+      #dailyWheater div {
+        background-color: rgba(196, 221, 214, 0.432);
+        text-align: center;
+        border-radius: 30px;
+        padding: 10px;
+      }
+      #search {
+        width: 600px;
+        height: 60px;
+        border-radius: 10px;
+        border: 1px solid gainsboro;
+        padding: 36px;
+		align-items: center;
+		justify-content: center;
+      }
+      
+      #wheaterData{
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+
+      }
+       #wheaterData p{
+        background-color: rgba(231, 216, 200, 0.397);
+        border-radius: 10px;
+        margin: 3px 0px;
+        padding: 5px 5px;
+      }
+      #gmap_canvas{
+        display: none;
+      }
+      li{
+      
+       margin-left: 30px;
+      }
+	  #bottomLeftButton {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+.navbar {
+    display: flex;
+    padding: 12px 0;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.navbar .hamburger-btn {
+    display: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.navbar .logo {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.navbar .logo img {
+    width: 40px;
+    border-radius: 50%;
+}
+.navbar .logo h2 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+.navbar .links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+    align-items: center;
+}
+.navbar .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: none;
+    color: #000;
+    cursor: pointer;
+}
+.navbar .links a {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.1s ease;
+}
+.navbar .links a:hover {
+    color: #19e8ff;
+}
+.navbar .login-btn {
+    border: none;
+    outline: none;
+    background: black;
+    color: blue;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+.navbar .login-btn:hover {
+    background: #ddd;
+}
+section {
+	font-family: Comic Sans MS;
+	font-size: 16pt;
+	color: Black;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f4f4f4;
+	text-align: center;
+}
+
+#Home, #About,#Contact, #Category{
+	opacity: 0.5;
+}
+ol.d {list-style-type: decimal-leading-zero;}
+button{
+  position: relative;
+  height: 60px;
+  width: 200px;
+  border: none;
+  outline: none;
+  color: white;
+  background: #111;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+}
+button:before{
+  position: absolute;
+  content: '';
+  top: -2px;
+  left: -2px;
+  height: calc(100% + 4px);
+  width: calc(100% + 4px);
+  border-radius: 5px;
+  z-index: -1;
+  opacity: 0;
+  filter: blur(5px);
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  background-size: 400%;
+  transition: opacity .3s ease-in-out;
+  animation: animate 20s linear infinite;
+}
+button:hover:before{
+  opacity: 1;
+}
+button:hover:active{
+  background: none;
+}
+button:hover:active:before{
+  filter: blur(2px);
+}
+@keyframes animate {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.form-container {
+    padding: 1rem;
+    width: 50%;
+    margin: auto;
+}
+
+.form-container input {
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 1rem;
+    color: #444;
+    font-weight: 500;
+    background: whitesmoke;
+    padding-left: 20px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.form-container textarea {
+    display: block;
+    width: 100%;
+    border: none;
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 1rem;
+    color: #444;
+    font-weight: 500;
+    background: whitesmoke;
+    padding-left: 20px;
+    border: 1px solid;
+    border-radius: 10px;
+    color: #444;
+    outline: none;
+    resize: none;
+}
+
+.form-container h2 {
+    font-size: 2.7rem;
+    color: black;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-top: -1.2rem;
+}
+
+.form-container a {
+    font-size: 1.3rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-weight: small;
+}
+
+.btn-primary {
+    color: #fff;
+    background: black;
+}
+
+.btn-primary:hover {
+    background: #117964;
+    transition: background 0.3s ease-in-out;
+}
